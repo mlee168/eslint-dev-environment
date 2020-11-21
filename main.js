@@ -2,37 +2,37 @@ const budget = {
     myBudget: [
         {
             title: 'Phone',
-            budget: 35
+            budget: 35,
         },
         {
             title: 'Internet',
-            budget: 45
+            budget: 45,
         },
         {
             title: 'Education',
-            budget: 80
+            budget: 80,
         },
         {
             title: 'Eat out',
-            budget: 25
+            budget: 25,
         },
         {
             title: 'Rent',
-            budget: 275
+            budget: 275,
         },
         {
             title: 'Grocery',
-            budget: 110
+            budget: 110,
         },
         {
             title: 'Pharmacy',
-            budget: 40
+            budget: 40,
         },
         {
             title: 'Donations',
-            budget: 10
+            budget: 10,
         },
-    ]
+    ],
 };
 
 function generateTable(b) {
@@ -49,24 +49,24 @@ generateTable(budget.myBudget);
 
 function aZ() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.title > b.title) ? 1 : - 1);
+    newArray.sort((a, b) => (a.title > b.title ? 1 : -1));
     generateTable(newArray);
 }
 
 function zA() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.title < b.title) ? 1 : - 1);
+    newArray.sort((a, b) => (a.title < b.title ? 1 : -1));
     generateTable(newArray);
 }
 
 function biggerBudget() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.budget < b.budget) ? 1 : - 1);
+    newArray.sort((a, b) => (a.budget < b.budget ? 1 : -1));
     generateTable(newArray);
 }
 
 function smallerBudget() {
     const newArray = [...budget.myBudget];
-    newArray.sort((a, b) => (a.budget > b.budget) ? 1 : - 1);
+    newArray.sort((a, b) => (a.budget > b.budget ? 1 : -1));
     generateTable(newArray);
 }
